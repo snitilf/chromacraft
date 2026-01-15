@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Palette } from '../../types';
-import { Check, Info, Settings, ToggleLeft, ToggleRight, X } from 'lucide-react';
+import { Check, Settings, ToggleLeft, ToggleRight } from 'lucide-react';
 
 export const ComponentsPreview: React.FC<{ palette: Palette }> = ({ palette }) => {
   const [toggle, setToggle] = useState(true);

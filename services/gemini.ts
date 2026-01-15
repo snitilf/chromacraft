@@ -1,5 +1,5 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { Palette, DEFAULT_PALETTE } from "../types";
+import { Palette } from "../types";
 
 const genAI = new GoogleGenerativeAI(import.meta.env.VITE_API_KEY || "");
 
