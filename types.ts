@@ -7,10 +7,10 @@ export interface Palette {
 }
 
 export const DEFAULT_PALETTE: Palette = {
-  primary: '#5F7F8E',
-  secondary: '#A0A5B5',
-  accent: '#B8A183',
-  background: '#F2F5F8',
+  primary: '#36454F',
+  secondary: '#2C3E50',
+  accent: '#463EBA',
+  background: '#F6F9FC',
   surface: '#FFFFFF',
 };
 
