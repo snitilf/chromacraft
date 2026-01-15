@@ -7,11 +7,11 @@ export interface Palette {
 }
 
 export const DEFAULT_PALETTE: Palette = {
-  primary: '#64748B',   // Muted Slate Blue
-  secondary: '#8CAE9E', // Sage Green
-  accent: '#C27A58',    // Clay/Rust
-  background: '#F5F5F0', // Oatmeal
-  surface: '#E2E8F0',   // Light Grey Surface
+  primary: '#5F7F8E',
+  secondary: '#A0A5B5',
+  accent: '#B8A183',
+  background: '#F2F5F8',
+  surface: '#FFFFFF',
 };
 
 export interface GeneratePaletteResponse {
