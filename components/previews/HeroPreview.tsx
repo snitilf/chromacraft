@@ -1,6 +1,6 @@
 import React from 'react';
 import { Palette } from '../../types';
-import { ArrowRight, BarChart3, Users, Zap } from 'lucide-react';
+import { ArrowRight, BarChart3, Zap } from 'lucide-react';
 
 export const HeroPreview: React.FC<{ palette: Palette }> = ({ palette }) => {
   return (
@@ -15,9 +15,9 @@ export const HeroPreview: React.FC<{ palette: Palette }> = ({ palette }) => {
            <span className="font-bold tracking-tight" style={{ color: palette.primary }}>White Monster Group</span>
         </div>
         <div className="flex gap-4 text-xs font-medium opacity-60" style={{ color: palette.primary }}>
-            <span>Products</span>
-            <span>Solutions</span>
-            <span>Pricing</span>
+            <span>Produkty</span>
+            <span>Řešení</span>
+            <span>Ceny</span>
         </div>
       </div>
 
@@ -25,15 +25,15 @@ export const HeroPreview: React.FC<{ palette: Palette }> = ({ palette }) => {
       <div className="flex-1 flex flex-col items-center justify-center p-8 text-center space-y-6">
         <div className="inline-flex items-center px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border border-current opacity-70"
              style={{ color: palette.accent, borderColor: palette.accent, backgroundColor: `${palette.accent}15` }}>
-            <Zap className="w-3 h-3 mr-1" /> New Version 2.0
+            <Zap className="w-3 h-3 mr-1" /> Nová verze 2.0
         </div>
         
         <h2 className="text-3xl md:text-4xl font-extrabold leading-tight max-w-md" style={{ color: palette.primary }}>
-          Analytics for the <span className="opacity-70">modern builder</span>.
+          Analytika pro <span className="opacity-70">moderního tvůrce</span>.
         </h2>
         
         <p className="max-w-xs text-sm opacity-80 leading-relaxed" style={{ color: palette.primary }}>
-          Gain insights instantly. Our sophisticated tools help you make better decisions, faster.
+          Získejte okamžité poznatky. Naše sofistikované nástroje vám pomohou činit lepší rozhodnutí rychleji.
         </p>
 
         <div className="flex gap-3 mt-2">
@@ -41,13 +41,13 @@ export const HeroPreview: React.FC<{ palette: Palette }> = ({ palette }) => {
             className="px-5 py-2.5 rounded-lg text-sm font-semibold shadow-md transition-transform active:scale-95 flex items-center"
             style={{ backgroundColor: palette.primary, color: palette.background }}
           >
-            Get Started <ArrowRight className="w-4 h-4 ml-2" />
+            Začít <ArrowRight className="w-4 h-4 ml-2" />
           </button>
           <button
             className="px-5 py-2.5 rounded-lg text-sm font-semibold border transition-colors hover:bg-black/5"
             style={{ borderColor: palette.secondary, color: palette.secondary }}
           >
-            Live Demo
+            Živá ukázka
           </button>
         </div>
       </div>
