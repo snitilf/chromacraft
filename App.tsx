@@ -22,13 +22,19 @@ const App: React.FC = () => {
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="bg-slate-900 p-1.5 rounded-lg">
-                <PaletteIcon className="w-5 h-5 text-white" />
+            <div 
+              className="p-1.5 rounded-lg transition-colors duration-300"
+              style={{ backgroundColor: palette.primary }}
+            >
+                <PaletteIcon 
+                  className="w-5 h-5 transition-colors duration-300" 
+                  style={{ color: palette.background }} 
+                />
             </div>
-            <h1 className="text-lg font-bold tracking-tight text-slate-800">Chroma <span className="font-light text-slate-500">Sophisticate</span></h1>
+            <h1 className="text-lg font-bold tracking-tight text-slate-800">Chroma <span className="font-light text-slate-500">Craft</span></h1>
           </div>
-          <a href="https://github.com/google-gemini" target="_blank" rel="noreferrer" className="text-xs font-medium text-slate-500 hover:text-slate-900 transition-colors">
-            Powered by Gemini
+          <a href="#" className="text-xs font-medium text-slate-500 hover:text-slate-900 transition-colors">
+            Powered by White Monster and Black Coffee
           </a>
         </div>
       </header>
@@ -100,14 +106,15 @@ const App: React.FC = () => {
                     <span className="px-2 py-1 bg-slate-100 rounded text-[10px] font-mono text-slate-500">Real-time Rendering</span>
                 </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 h-[600px]">
-                    {/* Preview 1: SaaS (Large, spans 2 cols on mobile if needed, but here we fit nicely) */}
+                {/* Changed fixed h-[600px] to auto height with min-heights for children to prevent overlap */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* Preview 1: SaaS (Large, spans 2 cols on mobile if needed) */}
                     <div className="md:col-span-2 h-[320px]">
                         <HeroPreview palette={palette} />
                     </div>
                     
-                    {/* Preview 2: Mobile */}
-                    <div className="md:col-span-1 h-[260px] md:h-auto">
+                    {/* Preview 2: Mobile - Added min-h-[500px] to fit the scaled phone comfortably */}
+                    <div className="md:col-span-1 min-h-[500px]">
                          <div className="h-full bg-slate-100 rounded-2xl border border-slate-200 flex items-center justify-center p-4 overflow-hidden relative">
                             {/* Pattern Background for contrast */}
                             <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
@@ -117,8 +124,8 @@ const App: React.FC = () => {
                          </div>
                     </div>
 
-                    {/* Preview 3: Components */}
-                    <div className="md:col-span-1 h-[260px] md:h-auto">
+                    {/* Preview 3: Components - Matches height of mobile preview */}
+                    <div className="md:col-span-1 min-h-[500px]">
                         <ComponentsPreview palette={palette} />
                     </div>
                 </div>
