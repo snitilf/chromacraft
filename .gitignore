@@ -24,3 +24,6 @@ build/
 # OS
 .DS_Store
 Thumbs.db
+
+CLEANUP_COMPLETE.md
+FIX_LEAKED_KEY.md
