@@ -1,4 +1,4 @@
-# chromacraft
+# ChromaCraft
 
 a color palette previewer for designers and developers who are tired of guessing how their colors will look in real interfaces.
 
