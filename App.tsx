@@ -31,10 +31,10 @@ const App: React.FC = () => {
                   style={{ color: palette.background }} 
                 />
             </div>
-            <h1 className="text-lg font-bold tracking-tight text-slate-800">Chroma <span className="font-light text-slate-500">Craft</span></h1>
+            <h1 className="text-lg font-bold tracking-tight text-slate-800">Chroma<span className="font-light text-slate-500">Craft</span></h1>
           </div>
           <a href="#" className="text-xs font-medium text-slate-500 hover:text-slate-900 transition-colors">
-            Powered by White Monster and Black Coffee
+            Powered by Black Coffee
           </a>
         </div>
       </header>
