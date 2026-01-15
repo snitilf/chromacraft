@@ -25,5 +25,6 @@ build/
 .DS_Store
 Thumbs.db
 
-CLEANUP_COMPLETE.md
-FIX_LEAKED_KEY.md
+# Documentation (keep only README.md)
+*.md
+!README.md
