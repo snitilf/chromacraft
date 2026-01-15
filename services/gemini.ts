@@ -5,8 +5,13 @@ const genAI = new GoogleGenerativeAI(import.meta.env.VITE_API_KEY || "");
 
 export const generatePalette = async (description: string): Promise<Palette> => {
   // Check if API key is set
-  if (!import.meta.env.VITE_API_KEY) {
-    throw new Error("API key not found. Please set VITE_API_KEY in your .env file.");
+  const apiKey = import.meta.env.VITE_API_KEY;
+  if (!apiKey || apiKey.trim() === "") {
+    const isProduction = import.meta.env.PROD;
+    const errorMessage = isProduction
+      ? "API key not found. Please set VITE_API_KEY in your Vercel project settings (Settings > Environment Variables)."
+      : "API key not found. Please set VITE_API_KEY in your .env file and restart the dev server.";
+    throw new Error(errorMessage);
   }
 
   try {
