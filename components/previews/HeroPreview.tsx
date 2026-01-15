@@ -12,7 +12,7 @@ export const HeroPreview: React.FC<{ palette: Palette }> = ({ palette }) => {
       <div className="flex items-center justify-between px-6 py-4 border-b border-black/5">
         <div className="flex items-center gap-2">
            <div className="w-6 h-6 rounded-full" style={{ backgroundColor: palette.primary }}></div>
-           <span className="font-bold tracking-tight" style={{ color: palette.primary }}>White Monster Group</span>
+           <span className="font-bold tracking-tight" style={{ color: palette.primary }}>ChromaCraft</span>
         </div>
         <div className="flex gap-4 text-xs font-medium opacity-60" style={{ color: palette.primary }}>
             <span>Produkty</span>
