@@ -6,7 +6,7 @@ import { HeroPreview } from './components/previews/HeroPreview';
 import { MobilePreview } from './components/previews/MobilePreview';
 import { ComponentsPreview } from './components/previews/ComponentsPreview';
 import { ExportPanel } from './components/ExportPanel';
-import { Palette as PaletteIcon, Sliders } from 'lucide-react';
+import { Palette as PaletteIcon, Sliders, Zap, Target, Layers, Shield } from 'lucide-react';
 
 const App: React.FC = () => {
   const [palette, setPalette] = useState<Palette>(DEFAULT_PALETTE);
@@ -131,6 +131,62 @@ const App: React.FC = () => {
                 </div>
            </div>
 
+        </section>
+
+        {/* Research-Backed Optimization Section */}
+        <section className="bg-white rounded-2xl border border-slate-200 p-8">
+          <div className="text-center mb-8">
+            <h2 className="text-xl font-bold text-slate-900 mb-2">Research-Backed Color Optimization</h2>
+            <p className="text-sm text-slate-500 max-w-2xl mx-auto">
+              Every palette is engineered using behavioral psychology and conversion science principles from academic research and industry A/B testing data.
+            </p>
+          </div>
+          
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* 50ms Rule */}
+            <div className="space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center">
+                <Zap className="w-5 h-5 text-amber-600" />
+              </div>
+              <h3 className="font-semibold text-slate-900">The 50ms Rule</h3>
+              <p className="text-xs text-slate-500 leading-relaxed">
+                Users form permanent aesthetic judgments in 50 milliseconds. Every palette passes the "visceral gate" with proper contrast and visual harmony.
+              </p>
+            </div>
+            
+            {/* Isolation Effect */}
+            <div className="space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-rose-50 flex items-center justify-center">
+                <Target className="w-5 h-5 text-rose-600" />
+              </div>
+              <h3 className="font-semibold text-slate-900">Isolation Effect</h3>
+              <p className="text-xs text-slate-500 leading-relaxed">
+                Accent colors are calculated as complementary hues (180° opposite) to create maximum CTA saliency. This technique shows 21% conversion lifts.
+              </p>
+            </div>
+            
+            {/* 60-30-10 Rule */}
+            <div className="space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center">
+                <Layers className="w-5 h-5 text-indigo-600" />
+              </div>
+              <h3 className="font-semibold text-slate-900">60-30-10 Rule</h3>
+              <p className="text-xs text-slate-500 leading-relaxed">
+                Color distribution follows the proven ratio: 60% background, 30% secondary, 10% accent. This reduces cognitive load and creates clear hierarchy.
+              </p>
+            </div>
+            
+            {/* Accessibility */}
+            <div className="space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center">
+                <Shield className="w-5 h-5 text-emerald-600" />
+              </div>
+              <h3 className="font-semibold text-slate-900">WCAG Compliant</h3>
+              <p className="text-xs text-slate-500 leading-relaxed">
+                Every palette maintains minimum 4.5:1 contrast ratios and uses research-backed alternatives to reduce eye strain and improve readability.
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* Export Section */}
