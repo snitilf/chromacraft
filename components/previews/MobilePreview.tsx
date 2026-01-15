@@ -17,8 +17,8 @@ export const MobilePreview: React.FC<{ palette: Palette }> = ({ palette }) => {
         {/* Header */}
         <div className="pt-10 px-5 pb-4 flex justify-between items-center">
              <div>
-                <p className="text-xs opacity-60 font-medium" style={{ color: palette.primary }}>Welcome back,</p>
-                <h3 className="text-lg font-bold" style={{ color: palette.primary }}>Alex D.</h3>
+                <p className="text-xs opacity-60 font-medium" style={{ color: palette.primary }}>Dobrý den,</p>
+                <h3 className="text-lg font-bold" style={{ color: palette.primary }}>Filip</h3>
              </div>
              <div className="w-8 h-8 rounded-full flex items-center justify-center relative" style={{ backgroundColor: palette.surface }}>
                 <Bell className="w-4 h-4" style={{ color: palette.primary }} />
@@ -32,7 +32,7 @@ export const MobilePreview: React.FC<{ palette: Palette }> = ({ palette }) => {
                 <span className="text-xs opacity-70 bg-black/20 px-2 py-0.5 rounded">Total Balance</span>
                 <TrendingUp className="w-4 h-4" style={{ color: palette.accent }} />
              </div>
-             <div className="text-2xl font-bold tracking-tight">$12,450.00</div>
+             <div className="text-2xl font-bold tracking-tight">$12,450.67</div>
              <div className="text-[10px] mt-1 opacity-80">+2.4% from last month</div>
         </div>
 
@@ -49,7 +49,7 @@ export const MobilePreview: React.FC<{ palette: Palette }> = ({ palette }) => {
                             <div className="text-xs font-semibold" style={{ color: palette.primary }}>Subscription</div>
                             <div className="text-[10px] opacity-60" style={{ color: palette.primary }}>Today, 9:41 AM</div>
                         </div>
-                        <div className="text-xs font-bold" style={{ color: palette.primary }}>-$14.00</div>
+                        <div className="text-xs font-bold" style={{ color: palette.primary }}>-$67.00</div>
                     </div>
                 ))}
             </div>
