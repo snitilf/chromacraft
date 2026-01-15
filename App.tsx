@@ -145,8 +145,11 @@ const App: React.FC = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* 50ms Rule */}
             <div className="space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center">
-                <Zap className="w-5 h-5 text-amber-600" />
+              <div 
+                className="w-10 h-10 rounded-xl flex items-center justify-center transition-colors duration-300"
+                style={{ backgroundColor: `${palette.primary}15` }}
+              >
+                <Zap className="w-5 h-5 transition-colors duration-300" style={{ color: palette.primary }} />
               </div>
               <h3 className="font-semibold text-slate-900">The 50ms Rule</h3>
               <p className="text-xs text-slate-500 leading-relaxed">
@@ -156,8 +159,11 @@ const App: React.FC = () => {
             
             {/* Isolation Effect */}
             <div className="space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-rose-50 flex items-center justify-center">
-                <Target className="w-5 h-5 text-rose-600" />
+              <div 
+                className="w-10 h-10 rounded-xl flex items-center justify-center transition-colors duration-300"
+                style={{ backgroundColor: `${palette.primary}15` }}
+              >
+                <Target className="w-5 h-5 transition-colors duration-300" style={{ color: palette.primary }} />
               </div>
               <h3 className="font-semibold text-slate-900">Isolation Effect</h3>
               <p className="text-xs text-slate-500 leading-relaxed">
@@ -167,8 +173,11 @@ const App: React.FC = () => {
             
             {/* 60-30-10 Rule */}
             <div className="space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center">
-                <Layers className="w-5 h-5 text-indigo-600" />
+              <div 
+                className="w-10 h-10 rounded-xl flex items-center justify-center transition-colors duration-300"
+                style={{ backgroundColor: `${palette.primary}15` }}
+              >
+                <Layers className="w-5 h-5 transition-colors duration-300" style={{ color: palette.primary }} />
               </div>
               <h3 className="font-semibold text-slate-900">60-30-10 Rule</h3>
               <p className="text-xs text-slate-500 leading-relaxed">
@@ -178,8 +187,11 @@ const App: React.FC = () => {
             
             {/* Accessibility */}
             <div className="space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center">
-                <Shield className="w-5 h-5 text-emerald-600" />
+              <div 
+                className="w-10 h-10 rounded-xl flex items-center justify-center transition-colors duration-300"
+                style={{ backgroundColor: `${palette.primary}15` }}
+              >
+                <Shield className="w-5 h-5 transition-colors duration-300" style={{ color: palette.primary }} />
               </div>
               <h3 className="font-semibold text-slate-900">WCAG Compliant</h3>
               <p className="text-xs text-slate-500 leading-relaxed">
