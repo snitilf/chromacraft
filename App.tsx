@@ -109,7 +109,7 @@ const App: React.FC = () => {
                 {/* Changed fixed h-[600px] to auto height with min-heights for children to prevent overlap */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Preview 1: SaaS (Large, spans 2 cols on mobile if needed) */}
-                    <div className="md:col-span-2 h-[320px]">
+                    <div className="md:col-span-2 h-[420px]">
                         <HeroPreview palette={palette} />
                     </div>
                     
