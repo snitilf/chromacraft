@@ -11,7 +11,7 @@ export const generatePalette = async (description: string): Promise<Palette> => 
 
   try {
     const model = genAI.getGenerativeModel({ 
-      model: "gemini-1.5-flash",
+      model: "gemini-2.5-flash",
     });
 
     const prompt = `Generate a sophisticated UI color palette based on this description: "${description}".
