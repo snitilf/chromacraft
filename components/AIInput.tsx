@@ -43,8 +43,8 @@ export const AIInput: React.FC<AIInputProps> = ({ onPaletteGenerated }) => {
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
           onKeyDown={handleKeyDown}
-          placeholder="Describe a vibe (e.g., 'Scandinavian forest morning' or 'Cyberpunk neon')"
-          className="flex-1 p-3 bg-transparent border-none outline-none text-slate-700 placeholder-slate-400 text-sm min-w-0"
+          placeholder="Describe a vibe"
+          className="flex-1 p-4 bg-transparent border-none outline-none text-slate-700 placeholder-slate-400 text-sm min-w-0"
           disabled={loading}
         />
         <button
