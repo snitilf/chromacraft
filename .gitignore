@@ -28,3 +28,5 @@ Thumbs.db
 # Documentation (keep only README.md)
 *.md
 !README.md
+.vercel
+.env*.local

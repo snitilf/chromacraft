@@ -35,7 +35,7 @@ chromacraft doesn't just generate pretty colors, it applies behavioral psycholog
 ### prerequisites
 
 - node.js
-- a gemini api key from google ai studio
+- an openai api key from [platform.openai.com](https://platform.openai.com)
 
 ### running locally
 
@@ -46,7 +46,7 @@ chromacraft doesn't just generate pretty colors, it applies behavioral psycholog
 
 2. create a `.env` file in the root directory:
    ```
-   GEMINI_API_KEY=your_gemini_api_key_here
+   OPENAI_API_KEY=your_openai_api_key_here
    ```
 
 3. start the dev server with vercel cli (this runs both the frontend and api routes):
@@ -63,7 +63,7 @@ chromacraft doesn't just generate pretty colors, it applies behavioral psycholog
 
 ### deploying to vercel
 
-when deploying to vercel, add `GEMINI_API_KEY` (not VITE_API_KEY) as an environment variable in your project settings under settings > environment variables. make sure it is enabled for production, preview, and development environments
+when deploying to vercel, add `OPENAI_API_KEY` as an environment variable in your project settings under settings > environment variables. make sure it is enabled for production, preview, and development environments
 
 the api key is kept secure on the server and never exposed to client-side code.
 
@@ -72,4 +72,4 @@ the api key is kept secure on the server and never exposed to client-side code.
 - react with typescript
 - vite
 - tailwind css
-- google gemini api for palette generation
+- openai gpt-4o for palette generation
