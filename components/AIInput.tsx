@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { generatePalette } from '../services/gemini';
+import { generatePalette } from '../services/ai';
 import { Palette } from '../types';
 import { Sparkles, Loader2, CornerDownLeft } from 'lucide-react';
 

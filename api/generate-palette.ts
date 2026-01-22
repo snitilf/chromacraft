@@ -1,4 +1,4 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import OpenAI from "openai";
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 
 export default async function handler(
@@ -15,18 +15,15 @@ export default async function handler(
     return res.status(400).json({ error: "Description is required" });
   }
 
-  const apiKey = process.env.GEMINI_API_KEY;
+  const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
-    return res.status(500).json({ 
-      error: "API key not configured. Please set GEMINI_API_KEY in Vercel environment variables." 
+    return res.status(500).json({
+      error: "API key not configured. Please set OPENAI_API_KEY in Vercel environment variables."
     });
   }
 
   try {
-    const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ 
-      model: "gemini-2.5-flash",
-    });
+    const openai = new OpenAI({ apiKey });
 
     const prompt = `You are a color science expert. Generate a high-conversion UI color palette based on this description: "${description}".
 
@@ -84,9 +81,24 @@ Do not include any text before or after the JSON object.
 
 The colors must work together as a cohesive system optimized for both aesthetics AND conversion.`;
 
-    const result = await model.generateContent(prompt);
-    const response = result.response;
-    let jsonText = response.text();
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4o",
+      messages: [
+        {
+          role: "system",
+          content: "You are a color science expert who generates UI color palettes. Always respond with valid JSON only, no markdown formatting."
+        },
+        {
+          role: "user",
+          content: prompt
+        }
+      ],
+      temperature: 0.7,
+      max_tokens: 200,
+      response_format: { type: "json_object" }
+    });
+
+    let jsonText = completion.choices[0]?.message?.content;
     
     if (!jsonText) {
       return res.status(500).json({ error: "No response from AI" });
