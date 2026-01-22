@@ -82,7 +82,7 @@ Do not include any text before or after the JSON object.
 The colors must work together as a cohesive system optimized for both aesthetics AND conversion.`;
 
     const completion = await openai.chat.completions.create({
-      model: "gpt-4o",
+      model: "gpt-4o-mini",
       messages: [
         {
           role: "system",

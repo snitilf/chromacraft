@@ -72,4 +72,4 @@ the api key is kept secure on the server and never exposed to client-side code.
 - react with typescript
 - vite
 - tailwind css
-- openai gpt-4o for palette generation
+- openai gpt-4o-mini for palette generation
